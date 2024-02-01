@@ -1,0 +1,3 @@
+https://t2sde.org/packages/stone
+
+https://svn.exactcode.de/t2/trunk/package/base/stone/
