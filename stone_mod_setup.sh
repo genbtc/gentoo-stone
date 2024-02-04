@@ -155,7 +155,7 @@ main() {
 	while read -u 200 a b c cmd; do
 		$STONE $cmd
 	done 200< <( grep -h '^# \[SETUP\] [0-9][0-9] ' \
-	          $SETUPD/mod_*.sh | sort)
+	          $SETUPD/stone_mod_*.sh | sort)
 
 	cron.run
 
