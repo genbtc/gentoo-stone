@@ -19,7 +19,7 @@ if ! Xdialog --infobox 'Test' 0 0 1; then
 	exit 1
 fi
 
-. ${SETUPD}/stone_gui_dialog.sh
+. ${SETUPD}/gui_dialog.sh
 
 gui_dialog() {
 	Xdialog --stdout --title 'STONE - Setup Tool ONE - T2 System Configuration' "$@"

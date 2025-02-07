@@ -23,11 +23,11 @@ if [ "$1" = "-text"   ]; then SETUPG="text"   ; shift; fi
 if [ "$1" = "-dialog" ]; then SETUPG="dialog" ; shift; fi
 if [ "$1" = "-x11"    ]; then SETUPG="x11"    ; shift; fi
 
-. ${SETUPD}/stone_gui_${SETUPG}.sh
+. ${SETUPD}/gui_${SETUPG}.sh
 
 if [ "$1" -a -f "${SETUPD}/mod_$1.sh" ]
 then
-	. ${SETUPD}/stone_mod_$1.sh ; shift
+	. ${SETUPD}/mod_$1.sh ; shift
 	if [ -z "$*" ]; then
 		main
 	else
@@ -45,7 +45,7 @@ then
 			command="$command '${name//$x/$x\\$x$x}'"
 			command="$command '$STONE ${cmd//$x/$x\\$x$x}'"
 		done < <( grep -h '^# \[MAIN\] [0-9][0-9] ' \
-						$SETUPD/stone_mod_*.sh | sort )
+						$SETUPD/mod_*.sh | sort )
 		eval "$command"
 	do : ; done
 else
